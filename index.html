@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;&display=swap" rel="stylesheet">
+  <link href="./styles/choices.css" rel="stylesheet" />
+  <link href="./styles/table.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./scripts/tailwind.config.js"></script>
+  <script src="./scripts/choices.min.js"></script>
+  <script src="./scripts/d3.min.js"></script>
+</head>
+
+<body>
+  <div class="mx-auto max-w-[918px]">
+
+    <!-- banner -->
+    <div class="relative">
+      <div class="p-0.5 bg-orange"></div>
+      <div class="w-full">
+        <div>
+          <img src="./images/index-banner-mobile.jpeg" class="w-full h-[360px] sm:hidden" />
+        </div>
+        <div class="bg-lightBlack w-full">
+          <img src="./images/index-banner.jpeg" class="w-full hidden h-[280px] bg-[#00000080] object-cover sm:block" />
+        </div>
+      </div>
+
+
+      <div class="absolute top-0 left-0 w-full">
+        <div>
+          <div class="flex flex-col items-center">
+            <div class="py-9">
+              <img src="./images/logo.svg" />
+            </div>
+            <div class="px-4 w-full sm:mt-4 mt-0 max-w-[610px] mx-auto">
+              <h3 class="text-[48px] font-bold leading-[38px] text-center uppercase text-white font-cormorant">
+                Island Wellness Index
+              </h3>
+            </div>
+            <div class="sm:mt-4 mt-2 text-base text-white sm:p-0 p-5 font-light max-w-[450px] ">
+              Considering spas, retreats, and hiking trails, we uncover which islands are best to switch off and enjoy a
+              wellness break.
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- content -->
+    <div class="bg-[#FFF9F3]">
+      <div class=" px-5 py-5 w-full">
+        <div class="max-w-[420px] mx-auto">
+          <select id="islands_sel"></select>
+        </div>
+      </div>
+
+      <div class="max-w-[420px] mx-auto">
+        <div class="p-2 sm:px-0">
+        </div>
+        <div class="px-5 sm:px-0">
+          <div class="flex justify-between mb-1">
+            <label class="font-light text-xs">Lower score</label>
+            <label class="font-light text-xs">Higher score</label>
+          </div>
+          <div class="flex w-full">
+            <div class="w-1/4 bg-blue p-[5x] rounded-l"></div>
+            <div class="w-1/4 bg-lightblue p-[5px]"></div>
+            <div class="w-1/4 bg-lightorange p-[5px]"></div>
+            <div class="w-1/4 bg-orange p-[5px] rounded-r"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full px-5 mt-5">
+        <div id="table" class="mx-auto"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/utils.js"></script>
+  <script src="./scripts/table.config.js"></script>
+  <script src="./scripts/DataStore.js"></script>
+  <script src="./scripts/table.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+
+</html>
